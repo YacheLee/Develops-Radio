@@ -2,6 +2,6 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context="com.dentaltw.developesradio.fragments.StationsFragment" android:background="#3dc7df">
+             tools:context="com.dentaltw.developesradio.fragments.StationsFragment">
     <include layout="@layout/content_stations_recycler"/>
 </FrameLayout>
