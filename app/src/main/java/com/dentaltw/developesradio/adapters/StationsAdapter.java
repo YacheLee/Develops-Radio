@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.dentaltw.developesradio.R;
+import com.dentaltw.developesradio.activities.MainActivity;
 import com.dentaltw.developesradio.holders.StationViewHolder;
 import com.dentaltw.developesradio.models.Station;
 
@@ -28,8 +29,16 @@ public class StationsAdapter extends RecyclerView.Adapter<StationViewHolder> {
 
     @Override
     public void onBindViewHolder(StationViewHolder holder, int position) {
-        Station station = stations.get(position);
+        final Station station = stations.get(position);
         holder.updateUI(station);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                MainActivity.getMainActivity().loadDetailsScreen(station);
+            }
+        });
     }
 
     @Override

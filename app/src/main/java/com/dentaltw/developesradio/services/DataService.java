@@ -19,35 +19,26 @@ public class DataService {
     }
 
     public ArrayList<Station> getFeaturedStations(){
-        ArrayList<Station> list = new ArrayList<>();
-        list.add(new Station("Flight plan (Tunas for Travel)","flightmdramsic"));
-        list.add(new Station("Two-Wheelin (Biking list)","bicyclemusic"));
-        list.add(new Station("Kids Jams (Music for children)","kidsmusic"));
-        list.add(new Station("Flight plan (Tunas for Travel)","flightmdramsic"));
-        list.add(new Station("Two-Wheelin (Biking list)","bicyclemusic"));
-        list.add(new Station("Kids Jams (Music for children)","kidsmusic"));
-        list.add(new Station("Flight plan (Tunas for Travel)","flightmdramsic"));
-        list.add(new Station("Two-Wheelin (Biking list)","bicyclemusic"));
-        list.add(new Station("Kids Jams (Music for children)","kidsmusic"));
-        list.add(new Station("Flight plan (Tunas for Travel)","flightmdramsic"));
-        list.add(new Station("Two-Wheelin (Biking list)","bicyclemusic"));
-        list.add(new Station("Kids Jams (Music for children)","kidsmusic"));
-        return list;
+        return getData();
     }
 
     public ArrayList<Station> getRecentStations(){
-        ArrayList<Station> list = new ArrayList<>();
-        list.add(new Station("Flight plan (Tunas for Travel)","flightmdramsic"));
-        list.add(new Station("Two-Wheelin (Biking list)","bicyclemusic"));
-        list.add(new Station("Kids Jams (Music for children)","kidsmusic"));
-        return list;
+        return getData();
     }
 
     public ArrayList<Station> getPartyStations(){
+        return getData();
+    }
+
+    private ArrayList<Station> getData(){
         ArrayList<Station> list = new ArrayList<>();
-        list.add(new Station("Flight plan (Tunas for Travel)","flightmdramsic"));
-        list.add(new Station("Two-Wheelin (Biking list)","bicyclemusic"));
-        list.add(new Station("Kids Jams (Music for children)","kidsmusic"));
+        for (int i=0;i<10;i++){
+            list.add(new Station("Flight plan (Tunas for Travel)","flightplanmusic"));
+            list.add(new Station("Two-Wheelin (Biking list)","bicyclemusic"));
+            list.add(new Station("Kids Jams (Music for children)","kidsmusic"));
+            list.add(new Station("Kids Jams (Music for children)","vinylmusic"));
+            list.add(new Station("Kids Jams (Music for children)","socialmusic"));
+        }
         return list;
     }
 }
